@@ -83,12 +83,12 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
     return (
       <EcommerceTemplate>
         <div className="text-center py-16">
-            <h1 className="text-4xl font-bold mb-4">Product not found</h1>
-            <p className="text-muted-foreground mb-8">The product you're looking for doesn't exist or has been deleted.</p>
+            <h1 className="text-4xl font-bold mb-4">Produkt nicht gefunden</h1>
+            <p className="text-muted-foreground mb-8">Das von Ihnen gesuchte Gewürz existiert nicht oder wurde entfernt.</p>
             <Button asChild>
               <Link to="/">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to home
+                Zurück zur Startseite
               </Link>
             </Button>
         </div>
@@ -128,7 +128,7 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
 
           {logic.product.description && (
             <div>
-              <h3 className="font-semibold mb-2">Description</h3>
+              <h3 className="font-semibold mb-2">Beschreibung</h3>
               <div 
                 className="text-muted-foreground prose prose-sm max-w-none"
                 dangerouslySetInnerHTML={{ __html: logic.product.description }}
@@ -158,7 +158,7 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
                         >
                           {value}
                           {!isAvailable && (
-                            <span className="ml-1 text-xs">(Out of stock)</span>
+                            <span className="ml-1 text-xs">(Ausverkauft)</span>
                           )}
                         </Button>
                       )
@@ -173,7 +173,7 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
           <div className="space-y-4">
             <div className="flex items-center space-x-4">
               <Label htmlFor="quantity" className="text-base font-medium">
-                Quantity
+                Menge
               </Label>
               <div className="flex items-center space-x-2">
                 <Button
@@ -210,11 +210,11 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
                 size="lg"
               >
                 <ShoppingCart className="mr-2 h-4 w-4" />
-                {logic.inStock ? 'Add to cart' : 'Out of stock'}
+                {logic.inStock ? 'In den Warenkorb' : 'Ausverkauft'}
               </Button>
               
               {!logic.inStock && (
-                <Badge variant="secondary">Out of stock</Badge>
+                <Badge variant="secondary">Ausverkauft</Badge>
               )}
             </div>
           </div>
@@ -223,15 +223,15 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
           {logic.matchingVariant && (
             <Card>
               <CardContent className="pt-6">
-                <h3 className="font-semibold mb-2">Product information</h3>
+                <h3 className="font-semibold mb-2">Produktinformationen</h3>
                 <div className="space-y-2 text-sm text-muted-foreground">
                   <div className="flex justify-between">
-                    <span>SKU:</span>
+                    <span>Art.-Nr.:</span>
                     <span>{logic.matchingVariant.sku || 'N/A'}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Available stock:</span>
-                    <span>{logic.matchingVariant.inventory_quantity || 0}</span>
+                    <span>Verfügbar:</span>
+                    <span>{logic.matchingVariant.inventory_quantity || 0} Stück</span>
                   </div>
                 </div>
               </CardContent>
@@ -246,7 +246,7 @@ export const ProductPageUI = ({ logic }: ProductPageUIProps) => {
             className="w-full"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Continue shopping
+            Weiter einkaufen
           </Button>
         </div>
       </div>

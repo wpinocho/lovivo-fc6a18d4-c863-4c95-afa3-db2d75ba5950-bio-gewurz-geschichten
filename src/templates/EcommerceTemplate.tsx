@@ -120,7 +120,7 @@ export const EcommerceTemplate = ({
           <div>
             <BrandLogoLeft />
             <p className="mt-4 text-white/70">
-              Bio-Gewürze aus aller Welt - Mit Liebe ausgewählt
+              Authentische Bio-Gewürze direkt von den Ursprungsländern
             </p>
           </div>
 
@@ -151,7 +151,7 @@ export const EcommerceTemplate = ({
         </div>
 
         <div className="mt-8 pt-8 border-t border-white/20 text-center text-white/70">
-          <p>&copy; 2025 GewürzLiebe. Alle Rechte vorbehalten.</p>
+          <p>&copy; 2025 OmVeda Organic Products. Alle Rechte vorbehalten.</p>
         </div>
       </div>
     </div>

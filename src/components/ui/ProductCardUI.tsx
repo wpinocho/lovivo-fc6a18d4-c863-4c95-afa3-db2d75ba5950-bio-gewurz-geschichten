@@ -50,7 +50,7 @@ export const ProductCardUI = ({ product }: ProductCardUIProps) => {
                     </span>
                   )}
                   {logic.product.featured && (
-                    <span className="bg-accent text-accent-foreground text-xs px-2 py-1 rounded font-medium shadow-sm">
+                    <span className="bg-accent text-white text-xs px-2 py-1 rounded font-medium shadow-sm">
                       Bestseller
                     </span>
                   )}

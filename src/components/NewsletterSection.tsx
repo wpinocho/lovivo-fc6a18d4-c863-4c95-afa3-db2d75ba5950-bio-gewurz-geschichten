@@ -26,20 +26,20 @@ export const NewsletterSection = () => {
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-foreground">
-                  Vielen Dank für Ihr Abonnement!
+                  Vielen Dank für Ihr Vertrauen!
                 </h3>
                 <p className="text-muted-foreground">
-                  Sie erhalten bald exklusive Angebote und Gewürz-Inspirationen.
+                  Sie erhalten bald exklusive Angebote, Ayurveda-Tipps und die neuesten Gewürz-Geschichten.
                 </p>
               </div>
             ) : (
               <div className="space-y-6">
                 <div className="space-y-3">
                   <h3 className="text-3xl font-bold text-foreground">
-                    Gewürz-Geschichten direkt in Ihr Postfach
+                    Ayurvedische Weisheit & exklusive Angebote
                   </h3>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    Erhalten Sie exklusive Rezepte, Angebote und Geschichten über unsere Bio-Gewürze
+                    Erhalten Sie authentische Gewürz-Rezepte, Ayurveda-Tipps und besondere Angebote direkt von OmVeda
                   </p>
                 </div>
                 
