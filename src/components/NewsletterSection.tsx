@@ -16,7 +16,7 @@ export const NewsletterSection = () => {
   return (
     <HeadlessNewsletter>
       {(logic) => (
-        <section className="bg-muted/30 py-16 border-y">
+        <section className="bg-gradient-to-br from-primary/5 to-secondary/5 py-20 border-y border-border/50">
           <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {logic.success ? (
               <div className="space-y-4">
@@ -26,20 +26,20 @@ export const NewsletterSection = () => {
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-foreground">
-                  Thanks for subscribing!
+                  Vielen Dank für Ihr Abonnement!
                 </h3>
                 <p className="text-muted-foreground">
-                  You'll receive our best offers and promotions soon.
+                  Sie erhalten bald exklusive Angebote und Gewürz-Inspirationen.
                 </p>
               </div>
             ) : (
               <div className="space-y-6">
-                <div className="space-y-2">
-                  <h3 className="text-2xl font-bold text-foreground">
-                    Want promotional emails?
+                <div className="space-y-3">
+                  <h3 className="text-3xl font-bold text-foreground">
+                    Gewürz-Geschichten direkt in Ihr Postfach
                   </h3>
-                  <p className="text-lg text-muted-foreground">
-                    Subscribe to our newsletter and get exclusive offers
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Erhalten Sie exklusive Rezepte, Angebote und Geschichten über unsere Bio-Gewürze
                   </p>
                 </div>
                 
@@ -52,7 +52,7 @@ export const NewsletterSection = () => {
                 >
                   <Input 
                     type="email"
-                    placeholder="your@email.com"
+                    placeholder="ihre@email.de"
                     value={logic.email}
                     onChange={(e) => logic.setEmail(e.target.value)}
                     disabled={logic.isSubmitting}
@@ -64,7 +64,7 @@ export const NewsletterSection = () => {
                     disabled={logic.isSubmitting}
                     className="sm:w-auto"
                   >
-                    {logic.isSubmitting ? 'Subscribing...' : 'Subscribe'}
+                    {logic.isSubmitting ? 'Wird abonniert...' : 'Abonnieren'}
                   </Button>
                 </form>
                 
